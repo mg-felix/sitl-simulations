@@ -1,6 +1,11 @@
 # sitl-simulations
 Sofware in the loop (SITL) simulations and implementation for my master thesis, using Gazebo, PX4, ROS and QGC.
 
+
+## QGroundControl
+
+https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.html follow the instructions under Ubuntu Linux section. Before running the roslaunch command, open QGC.
+
 # How to start
 
 ## Toolchain instalation based on (https://www.youtube.com/watch?v=9Mb-aV3lmZ0):
