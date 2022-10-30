@@ -1,0 +1,13 @@
+float32 x_pos
+float32 y_pos
+float32 z_pos
+float32 vel
+float32 vx
+float32 vy
+float32 vz
+float32 accelX
+float32 accelY
+float32 accelZ
+float32 accel
+float32 omega
+float32 psi

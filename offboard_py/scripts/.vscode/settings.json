@@ -1,0 +1,21 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/mgfelix/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/mgfelix/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "cSpell.words": [
+        "dpdgamma",
+        "linalg",
+        "loginfo",
+        "mavros",
+        "mgfelix",
+        "Odometry",
+        "offboard",
+        "rospy",
+        "setpoint"
+    ]
+}
