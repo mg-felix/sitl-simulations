@@ -42,7 +42,7 @@ $ : git submodule update --init --recursive
 
 $ : DONT_RUN=1 make px4_sitl_default gazebo
 
-## For these two next steps, replace the path "Tools/" with the path where your file setup_gazebo.bash is (search inside the Tools folder):
+## For these two next steps, replace the path "Tools/" with the path where your file setup_gazebo.bash is (search inside the src/Firmware/Tools folder):
 
 $ : source Tools/setup_gazebo.bash $ (pwd) $(pwd)/build/px4_sitl_default
 
