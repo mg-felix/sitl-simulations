@@ -12,38 +12,55 @@ https://docs.qgroundcontrol.com/master/en/getting_started/download_and_install.h
 
 Follow the steps:
 
-$: sudo apt update
-$: sudo apt upgrade
-$: sudo apt install git
-$: mkdir src
-$: cd src
-$: git clone https://github.com/PX4/Firmware.git --recursive
-$: cd Firmware
-$: bash ./Tools/setup/ubuntu.sh
+$ : sudo apt update
+
+$ : sudo apt upgrade
+
+$ : sudo apt install git
+
+$ : mkdir src
+
+$ : cd src
+
+$ : git clone https://github.com/PX4/Firmware.git --recursive
+
+$ : cd Firmware
+
+$ : bash ./Tools/setup/ubuntu.sh
 
 Reboot the computer
-$: wget https://raw.githubusercontent.com/ktelegenov/sim_ros_setup_noetic/main/ubuntu_sim_ros_noetic.sh
-$: bash ubuntu_sim_ros_noetic.sh
+
+$ : wget https://raw.githubusercontent.com/ktelegenov/sim_ros_setup_noetic/main/ubuntu_sim_ros_noetic.sh
+
+$ : bash ubuntu_sim_ros_noetic.sh
 
 Close the terminal and open it again
-$: cd src/Firmware
-$: git submodule update --init --recursive
-$: DONT_RUN=1 make px4_sitl_default gazebo
+
+$ : cd src/Firmware
+
+$ : git submodule update --init --recursive
+
+$ : DONT_RUN=1 make px4_sitl_default gazebo
 
 ## For these two steps, replace the path "Tools/" with the path where your file setup_gazebo.bash is (search inside the Tools folder):
-$: source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
-$: export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
 
-$: roslaunch px4 multi_uav_mavros_sitl.launch
+$ : source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+
+$ : export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
+
+$ : roslaunch px4 multi_uav_mavros_sitl.launch
 
 ## Include this repository (base on https://docs.px4.io/main/en/ros/mavros_offboard_python.html):
 
 Delete your /src folder inside the catkin_ws workspace folder and follow the steps:
 
-$: roscd  # Should cd into ~/catkin_ws/devel
-$: cd .. 
-$: git clone https://github.com/mg-felix/sitl-simulations.git src
-$: catkin build
+$ : roscd  # Should cd into ~/catkin_ws/devel
+
+$ : cd .. 
+
+$ : git clone https://github.com/mg-felix/sitl-simulations.git src
+
+$ : catkin build
 
 Ready to go!
 
