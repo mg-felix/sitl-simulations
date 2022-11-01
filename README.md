@@ -1,6 +1,9 @@
 # sitl-simulations
 Sofware in the loop (SITL) simulations and implementation for my master thesis, using Gazebo, PX4, ROS and QGC.
 
+## Requirements
+
+This tutorial assumes that you have an Ubuntu 20.04 machine set up. 
 
 ## QGroundControl
 
