@@ -3,7 +3,7 @@ Sofware in the loop (SITL) simulations and implementation for my master thesis, 
 
 ## Requirements
 
-This tutorial assumes that you have an Ubuntu 20.04 machine set up. 
+This tutorial assumes that you have an Ubuntu 20.04 machine set up. If you do not, here are some instructions on how to do it via virtual box: https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview
 
 ## QGroundControl
 
