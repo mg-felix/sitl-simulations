@@ -42,11 +42,9 @@ $ : git submodule update --init --recursive
 
 $ : DONT_RUN=1 make px4_sitl_default gazebo
 
-## For these two next steps, replace the path "Tools/" with the path where your file setup_gazebo.bash is (search inside the src/Firmware/Tools folder):
+$ : source Tools/simulation/gazebo/setup_gazebo.bash $ (pwd) $(pwd)/build/px4_sitl_default
 
-$ : source Tools/setup_gazebo.bash $ (pwd) $(pwd)/build/px4_sitl_default
-
-$ : export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
+$ : export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/simulation/gazebo/sitl_gazebo
 
 $ : roslaunch px4 multi_uav_mavros_sitl.launch
 
