@@ -32,13 +32,13 @@ $: cd Firmware
 $: bash ./Tools/setup/ubuntu.sh
 ```
 
-Reboot the computer
+Reboot the computer.
 ```
 $: wget https://raw.githubusercontent.com/ktelegenov/sim_ros_setup_noetic/main/ubuntu_sim_ros_noetic.sh
 
 $: bash ubuntu_sim_ros_noetic.sh
 ```
-Close the terminal and open it again
+Close the terminal and open it again.
 ```
 $: cd src/Firmware
 
@@ -51,8 +51,22 @@ $: source Tools/simulation/gazebo/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl
 $: export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/simulation/gazebo/sitl_gazebo
 
 $: roslaunch px4 multi_uav_mavros_sitl.launch
+
 ```
-## Include this repository (base on https://docs.px4.io/main/en/ros/mavros_offboard_python.html):
+
+Close the running simulation on your terminal by pressing Ctrl+C.
+
+Go to your setup.bash file and add this two lines of code at the end:
+
+```
+source Tools/simulation/gazebo/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/simulation/gazebo/sitl_gazebo
+```
+
+Save the file.
+
+## Include this repository (based on https://docs.px4.io/main/en/ros/mavros_offboard_python.html):
 
 Delete your /src folder inside the catkin_ws workspace folder and follow the steps:
 ```
