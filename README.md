@@ -16,7 +16,7 @@ $ : sudo apt update
 
 $ : sudo apt upgrade
 
-$ : sudo apt install git
+$ : sudo apt install git # Skip this step if you already have git installed!
 
 $ : mkdir src
 
@@ -44,7 +44,7 @@ $ : DONT_RUN=1 make px4_sitl_default gazebo
 
 ## For these two steps, replace the path "Tools/" with the path where your file setup_gazebo.bash is (search inside the Tools folder):
 
-$ : source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+$ : source Tools/setup_gazebo.bash $ (pwd) $(pwd)/build/px4_sitl_default
 
 $ : export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
 
