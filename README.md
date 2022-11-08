@@ -74,7 +74,7 @@ Save the file.
 
 Delete your /src folder inside the catkin_ws workspace folder and follow the steps:
 ```
-$: roscd  # Should cd into ~/catkin_ws/devel
+$: roscd  # Moves into ~/catkin_ws/devel directory
 
 $: cd .. 
 
