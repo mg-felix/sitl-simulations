@@ -80,6 +80,8 @@ $: cd ..
 
 $: git clone https://github.com/mg-felix/sitl-simulations.git src
 
+$: git checkout master
+
 $: catkin build
 ```
 Ready to go!
