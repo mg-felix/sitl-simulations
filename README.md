@@ -70,22 +70,6 @@ export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-1
 
 Save the file.
 
-## Include this repository (based on https://docs.px4.io/main/en/ros/mavros_offboard_python.html):
-
-Delete your /src folder inside the catkin_ws workspace folder and follow the steps:
-```
-$: roscd  # Moves into ~/catkin_ws/devel directory
-
-$: cd .. 
-
-$: git clone https://github.com/mg-felix/sitl-simulations.git src
-
-$: cd src
-
-$: git checkout master
-
-$: catkin build
-```
 Ready to go!
 
 # Running your simulations
