@@ -65,7 +65,7 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/ciafa/src/Firmware
 
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/ciafa/src/Firmware/Tools/simulation/gazebo/sitl_gazebo
 
-export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-9/plugins
+export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 ```
 
 Save the file.
