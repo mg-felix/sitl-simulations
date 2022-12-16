@@ -1,6 +1,12 @@
 # ROS ENVIRONMENT (CATKIN WORKSPACE)
 Sofware in the loop (SITL) simulations code to implement the designed control system in my master thesis.
 
+# HOW TO USE THE PACKAGES
+
+To start using the already made and available packages, copy the wanted package into your own catkin workspace source folder, usually under catkin_ws/src. Open your terminal in the catkin_ws directory and type:
+
+$: catkin build
+
 ## Control Module
 
 ### mpf_control and particles_control packages
