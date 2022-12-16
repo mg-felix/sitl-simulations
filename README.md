@@ -76,9 +76,13 @@ Ready to go!
 
 For every topic presented, several examples are already implemented and predefined. Check the mentioned folders for working examples.
 
-## Scripts
+## Packages
 
-The scripts go inside the catkin_ws/src/offboard_py/scripts folder. You can add whatever scripts you wish here.
+It is possible to create your own packages, to introduce a new feature to the flight simulation.
+
+To create your first test package, follow this tutorial in https://docs.px4.io/main/en/ros/mavros_offboard_python.html.
+
+Following similar steps, you can now create your own packages that add your own specific features such as aircraft control or computer vision for target detection algorithms. The scripts that implement those features go inside the /scripts folder inside your package. You can add whatever scripts you wish here.
 
 ## Launch files
 
