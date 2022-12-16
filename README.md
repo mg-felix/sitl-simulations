@@ -86,13 +86,13 @@ Following similar steps, you can now create your own packages that add your own 
 
 ## Launch files
 
-The launch files are inside the PX4-Autopilot/launch folder. You can add whatever .launch files and run them through the command $: roslaunch px4 [your-file-name].launch.
+The launch files are inside the PX4-Autopilot/launch folder. You can add whatever .launch files and run them through the command $: roslaunch px4 _[your-file-name]_.launch.
 In this files you can add your own nodes to automatically instantiate when running roslaunch. This nodes are written in Python and can use other Python files and functions, as you intend.
 
 ## Worlds
 
-The world files are inside the PX4-Autopilot/Tools/worlds. You can add whatever .world files in here.
+The world files are inside the PX4-Autopilot/Tools/worlds. You can add whatever .world files in here. You can costumize objects to be detected for instance, as well as define how they behave through time.
 
 ## Models
 
-The model files are inside the PX4-Autopilot/[your-Tools-path-previously-searched]/models. Add your models here.
+The model files are inside the PX4-Autopilot/Tools/simulation/gazebo/sitl_gazebo/models. Add your models here. You can for instance add cameras or other sensors to your UAVs, for instance, as well as design new objects to add to your world.
