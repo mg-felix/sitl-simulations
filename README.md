@@ -25,7 +25,7 @@ $: mkdir src
 
 $: cd src
 
-$: git clone https://github.com/PX4/Firmware.git --recursive
+$: git clone https://github.com/PX4/Firmware.git PX4-Autopilot --recursive
 
 $: cd Firmware
 
