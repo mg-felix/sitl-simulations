@@ -8,6 +8,9 @@ To start using the already made and available packages, copy the wanted package 
 ```
 $: catkin build
 ```
+Wait until the process is finished. You should get no errors (in red).
+
+You are now ready to import the scripts inside the packages onto your .launch files.
 
 ## Control Module
 
