@@ -27,7 +27,7 @@ $: cd src
 
 $: git clone https://github.com/PX4/Firmware.git PX4-Autopilot --recursive
 
-$: cd Firmware
+$: cd PX4-Autopilot
 
 $: bash ./Tools/setup/ubuntu.sh
 ```
@@ -40,7 +40,7 @@ $: bash ubuntu_sim_ros_noetic.sh
 ```
 Close the terminal and open it again.
 ```
-$: cd src/Firmware
+$: cd src/PX4-Autopilot
 
 $: git submodule update --init --recursive
 
@@ -59,11 +59,11 @@ Close the running simulation on your terminal by pressing Ctrl+C.
 Go to your .bashrc file in your Home folder (make hidden files visible) and add this lines of code at the end:
 
 ```
-source /home/:$(user)/src/Firmware/Tools/simulation/gazebo/setup_gazebo.bash /home/:$(user)/src/Firmware /home/:$(user)/src/Firmware/build/px4_sitl_default
+source /home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash /home/:$(user)/src/PX4-Autopilot /home/:$(user)/src/PX4-Autopilot/build/px4_sitl_default
 
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/Firmware
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/PX4-Autopilot
 
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/Firmware/Tools/simulation/gazebo/sitl_gazebo
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo/sitl_gazebo
 
 export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 ```
@@ -82,13 +82,13 @@ The scripts go inside the catkin_ws/src/offboard_py/scripts folder. You can add 
 
 ## Launch files
 
-The launch files are inside the Firmware/launch folder. You can add whatever .launch files and run them through the command $: roslaunch px4 [your-file-name].launch.
+The launch files are inside the PX4-Autopilot/launch folder. You can add whatever .launch files and run them through the command $: roslaunch px4 [your-file-name].launch.
 In this files you can add your own nodes to automatically instantiate when running roslaunch. This nodes are written in Python and can use other Python files and functions, as you intend.
 
 ## Worlds
 
-The world files are inside the Firmware/Tools/worlds. You can add whatever .world files in here.
+The world files are inside the PX4-Autopilot/Tools/worlds. You can add whatever .world files in here.
 
 ## Models
 
-The model files are inside the Firmware/[your-Tools-path-previously-searched]/models. Add your models here.
+The model files are inside the PX4-Autopilot/[your-Tools-path-previously-searched]/models. Add your models here.
