@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/multi_uav_mavros_sitl_video.launch">
+	</include>
+
+	<!-- Nodes to control the particles -->
+	<!-- Leader particle node-->
+
+	<node pkg="offboard_py" type="particleUpdatedLeader.py" name ="particleUpdatedLeader" required="true" output="screen">
+	</node>
+
+	<!-- Other particles nodes: as many as the number of UAVs -->
+
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated0" required="true" output="screen">
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated1" required="true" output="screen">
+		<param name = "uav_id" value = "uav1"/>
+	</node>
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated2" required="true" output="screen">
+		<param name = "uav_id" value = "uav2"/>
+	</node>
+
+
+	<!-- Nodes to define target position based on computer vision algorithm -->
+	<node pkg="offboard_py" type="image_publish.py" name="image_publisher" required="True" output="screen">
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<!-- Must be ran in a seperate terminal, since file location is not in the offboard scripts package -->
+	<node pkg="offboard_py" type="georeferentiation_car.py" name="georeferentiation_car" required="True" output="screen">
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<node pkg="offboard_py" type="kalman_filter.py" name="kalman_filter" required="True" output="screen">
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	
+	
+	<!-- Nodes to control the drones -->
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py0" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py1" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav1"/>
+	</node>
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py2" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav2"/>
+	</node>
+
+</launch>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/multi_uav_mavros_sitl.launch">
+	</include>
+
+
+	<!-- Node to define target position -->
+	<node pkg="offboard_py" type="targetUpdated.py" name="targetUpdated" required="True" output="screen">
+	</node>
+
+	<!-- Nodes to control the particles -->
+	<!-- Leader particle node-->
+
+	<node pkg="offboard_py" type="particleUpdatedLeader.py" name ="particleUpdatedLeader" required="true" output="screen">
+	</node>
+
+	<!-- Other particles nodes: as many as the number of UAVs -->
+
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated0" required="true" output="screen">
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated1" required="true" output="screen">
+		<param name = "uav_id" value = "uav1"/>
+	</node>
+	<node pkg="offboard_py" type="particleUpdated.py" name ="particleUpdated2" required="true" output="screen">
+		<param name = "uav_id" value = "uav2"/>
+	</node>
+	
+	<!-- Nodes to control the drones -->
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py0" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav0"/>
+	</node>
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py1" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav1"/>
+	</node>
+	<node pkg="offboard_py" type="takeoff_node.py" name="takeoff_node_py2" required="true" output="screen"> 
+		<param name = "uav_id" value = "uav2"/>
+	</node>
+
+</launch>
