@@ -56,14 +56,14 @@ $: roslaunch px4 multi_uav_mavros_sitl.launch
 
 Close the running simulation on your terminal by pressing Ctrl+C.
 
-Go to your .bashrc file in your Home folder (make hidden files visible) and add this two lines of code at the end:
+Go to your .bashrc file in your Home folder (make hidden files visible) and add this lines of code at the end:
 
 ```
-source /home/ciafa/src/Firmware/Tools/simulation/gazebo/setup_gazebo.bash /home/ciafa/src/Firmware /home/ciafa/src/Firmware/build/px4_sitl_default
+source /home/:$(user)/src/Firmware/Tools/simulation/gazebo/setup_gazebo.bash /home/:$(user)/src/Firmware /home/:$(user)/src/Firmware/build/px4_sitl_default
 
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/ciafa/src/Firmware
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/Firmware
 
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/ciafa/src/Firmware/Tools/simulation/gazebo/sitl_gazebo
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/Firmware/Tools/simulation/gazebo/sitl_gazebo
 
 export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 ```
