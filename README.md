@@ -14,7 +14,7 @@ Wait until the process is finished. You should get no errors (in red).
 
 You are now ready to import the scripts inside the packages onto your .launch files.
 
-# AVAILABLE PACKAGES
+# AVAILABLE PACKAGES AND MATERIAL
 
 ## Control Module
 
