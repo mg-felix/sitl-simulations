@@ -30,7 +30,7 @@ Adds the message structures to communicate the particles information.
 
 ### target_geolocation package
 
-The computer vision alorithm used to obtain the target's velocity and position is the one described in [Alves's master thesis](https://github.com/mg-felix/sitl-simulations/files/10230459/DissertacaoMestrado_ASPAL_PILAV_140667-B_Alves.pdf).
+The computer vision algorithm used to obtain the target's velocity and position is the one described in [Alves's master thesis](https://github.com/mg-felix/sitl-simulations/files/10230459/DissertacaoMestrado_ASPAL_PILAV_140667-B_Alves.pdf).
 
 ### target_msgs package
 
