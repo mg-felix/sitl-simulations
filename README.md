@@ -1,4 +1,4 @@
-# Thesis Material
+# ROS ENVIRONMENT (CATKIN WORKSPACE)
 Sofware in the loop (SITL) simulations code to implement the designed control system in my master thesis.
 
 ## Control Module
@@ -19,4 +19,8 @@ The computer vision alorithm used to obtain the target's velocity and position i
 
 ### target_msgs package
 
-Adds the message structures to communicate the target data. 
+Adds the message structures to communicate the target data.
+
+## Data
+
+All the simulation data is saved directly from the controller into the plot/simulation_data path. 
