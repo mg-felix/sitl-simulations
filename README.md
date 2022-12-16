@@ -9,10 +9,14 @@ The control system to steer the vehicles to the desired positions is the one des
 
 ### particles_msgs package
 
-Adds the message structures to send the particles information. 
+Adds the message structures to communicate the particles information. 
 
 ## CV for Target Data Module
 
 ### target_geolocation package
 
 The computer vision alorithm used to obtain the target's velocity and position is the one described in [Alves's master thesis](https://github.com/mg-felix/sitl-simulations/files/10230459/DissertacaoMestrado_ASPAL_PILAV_140667-B_Alves.pdf).
+
+### target_msgs package
+
+Adds the message structures to communicate the target data. 
