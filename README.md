@@ -3,10 +3,13 @@ Sofware in the loop (SITL) simulations code to implement the designed control sy
 
 ## Control Module
 
-### mpf_control package
+### mpf_control and particles_control packages
 
 The control system to steer the vehicles to the desired positions is the one described in [Félix's master thesis](https://github.com/mg-felix/sitl-simulations/files/10230432/DM_ALF_ENGEL_139928E_Miguel_Felix.pdf).
 
+### particles_msgs package
+
+Adds the message structures to send the particles information. 
 
 ## CV for Target Data Module
 
