@@ -34,7 +34,7 @@ $: bash ./Tools/setup/ubuntu.sh
 
 Reboot the computer.
 ```
-$: wget https://github.com/ktelegenov/scripts/blob/main/ubuntu_sim_ros_noetic.sh
+$: wget https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_install_noetic.sh
 
 $: bash ubuntu_sim_ros_noetic.sh
 ```
