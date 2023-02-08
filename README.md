@@ -46,9 +46,9 @@ $: git submodule update --init --recursive
 
 $: DONT_RUN=1 make px4_sitl_default gazebo
 
-$: source Tools/simulation/gazebo/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+$: source Tools/simulation/gazebo-classic/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
 
-$: export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/simulation/gazebo/sitl_gazebo
+$: export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/simulation/gazebo-classic/sitl_gazebo-classic
 
 $: roslaunch px4 multi_uav_mavros_sitl.launch
 
@@ -59,11 +59,11 @@ Close the running simulation on your terminal by pressing Ctrl+C.
 Go to your .bashrc file in your Home folder (make hidden files visible) and add this lines of code at the end:
 
 ```
-source /home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo/setup_gazebo.bash /home/:$(user)/src/PX4-Autopilot /home/:$(user)/src/PX4-Autopilot/build/px4_sitl_default
+source /home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo-classic/setup_gazebo.bash /home/:$(user)/src/PX4-Autopilot /home/:$(user)/src/PX4-Autopilot/build/px4_sitl_default
 
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/PX4-Autopilot
 
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo/sitl_gazebo
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/:$(user)/src/PX4-Autopilot/Tools/simulation/gazebo-classic/sitl_gazebo-classic
 
 export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins
 ```
